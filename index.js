@@ -23,7 +23,8 @@ var server = new Server({
 
 app.get('/', (req, res, next) => {
   console.log('get route', req.testing);
-  res.end();
+  res.send("<h1>You've made it to the regular landing page!</h1>")
+  //res.end();
 });
 
 app.ws('/', (ws, req) => {
