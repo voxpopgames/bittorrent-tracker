@@ -1,0 +1,23 @@
+{
+  "name": "voxpop-tracker-server",
+  "version": "1.0.0",
+  "description": "Bittorrent tracker to track peers for VoxPop Games",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "tracker": "bittorrent-tracker",
+    "server": "./index.js"
+  },
+  "author": "VoxPop Games",
+  "license": "ISC",
+  "dependencies": {
+    "bittorrent-tracker": "^9.18.3",
+    "express": "^4.17.2",
+    "express-ws": "^5.0.2",
+    "uws": "^200.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
