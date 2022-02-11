@@ -21,6 +21,28 @@ var server = new Server({
   }
 });
 
+server.on("start", function(addr) {
+  console.log("got start message from " + addr);
+});
+
+server.on("complete", function(addr) {
+  console.log("got complete message from " + addr);
+});
+server.on("update", function(addr) {
+  console.log("got update message from " + addr);
+});
+server.on("stop", function(addr) {
+  console.log("got stop message from " + addr);
+});
+
+server.on("error", function(err) {
+  console.log("error: " + err.message);
+});
+
+server.on('warning', function (err) {
+  console.log("warning: " + err.message)
+})
+
 app.get('/', (req, res, next) => {
   console.log('get route', req.testing);
   res.send("<h1>You've made it to the regular landing page!</h1>")
