@@ -35,11 +35,21 @@ server.on("stop", function(addr) {
   console.log("got stop message from " + addr);
 });
 
-server.on("error", function(err) {
+// server.on("error", function(err) {
+//   console.log("There was an error: ", err);
+//   console.log("error: " + err.message);
+// });
+
+server.on("error", (err) => {
+  console.log("There was an error: ", err);
   console.log("error: " + err.message);
 });
 
-server.on('warning', function (err) {
+// server.on('warning', function (err) {
+//   console.log("warning: " + err.message)
+// })
+
+server.on('warning', (err) => {
   console.log("warning: " + err.message)
 })
 
